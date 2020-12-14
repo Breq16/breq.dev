@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+<!-- mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png" />
+<link rel="manifest" href="/assets/icons/site.webmanifest" />
+<link rel="shortcut icon" href="/assets/icons/favicon.ico" />
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml" />
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- fontawesome -->
+<script src="https://kit.fontawesome.com/69d45d8e8c.js" crossorigin="anonymous"></script>
+
+<!-- google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+
+<!-- site-specific -->
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+  
+      <title>Breqbot</title>
+  
+</head>
+
+<body>
+
+  <div class="navbar sticky-top navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="/">breq.dev</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fas fa-hamburger"></span> <!-- haha, hamburger menu -->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                
+                    <li class="nav-item">
+                        <a
+                            class="nav-link nav-active"
+                            href="/projects">
+                            projects</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a
+                            class="nav-link "
+                            href="/hacks">
+                            hacks</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a
+                            class="nav-link "
+                            href="/archives">
+                            archives</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a
+                            class="nav-link "
+                            href="/contact">
+                            contact</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+  <br>
+<div class="container page">
+
+<h1>Breqbot</h1>
+
+    <p>A Discord bot with minigames and utilities.</p>
+
+
+
+
+
+
+
+<div class="row">
+    
+    <div class="col-xl-4 col-lg-6 col-md-6">
+        <div class="bordered-box">
+            <span>Project Date</span>
+            <h3><i class="fas fa-calendar"></i> 2020</h3>
+        </div>
+    </div>
+    
+    
+    <div class="col-xl-4 col-lg-6 col-md-6">
+        <div class="bordered-box">
+            <h3><i class="fab fa-github"></i> View Source Code</h3>
+            <span>
+                <a target="_blank" href="https://github.com/Breq16/breqbot">Breq16/breqbot</a>
+            </span>
+        </div>
+    </div>
+    
+    
+</div>
+
+
+<p><img src="/assets/images/breqbot/8ball.png" alt="" class="actual-size" /></p>
+
+<p class="caption">One of the many “just for fun” commands that Breqbot has.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Breqbot is a Discord bot that manages a virtual economy, provides several fun minigames, gives access to comics, and has a variety of other features. Users can add Breqbot to a Discord server with their friends, giving their community access to these features.</p>
+
+<p><em>There is a currently-running Breqbot instance at <a href="https://bot.breq.dev/" target="_blank">bot.breq.dev</a>, if you would like to give it a try!</em></p>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>A couple things came together to make this project happen. First, one of my friends invited me to a Discord server where they were using a variety of other popular Discord bots. I wasn’t a fan of how some of these bots ran their economy or other features, and I wanted to see if I could implement something better. Second, my work on <a href="/hacks/mcstatus" target="_blank">McStatus.js</a>’s backend using Heroku gave me experience working with microservice architectures, and I wanted to work on a more complex microservices project.</p>
+
+<h2 id="technical-description">Technical Description</h2>
+
+<p>A running Breqbot instance consists of three containerized processes: the web process, the Discord worker process, and the <a href="https://redis.io/">Redis</a> instance.</p>
+
+<h3 id="the-discord-worker">The Discord Worker</h3>
+
+<p>The discord worker is written using <a href="https://github.com/Rapptz/discord.py/" target="_blank">discord.py</a> using its <a href="https://discordpy.readthedocs.io/en/latest/ext/commands/index.html" target="_blank">bot commands framework</a>. This process listens for Discord events over the Discord Gateway, selects an appropriate command, and executes it. Here are some examples of these commands:</p>
+
+<p><img src="/assets/images/breqbot/2048.png" alt="" class="actual-size" />
+By adding reactions to the message (the arrow emojis), members of the Discord server can work together to play the famous browser game “2048.” Breqbot will listen for these reactions, modify the internal game state, and update the game board displayed.</p>
+
+<p><img src="/assets/images/breqbot/profile.png" alt="" class="actual-size" />
+Breqbot allows a user to configure their profile, which can then be displayed on request by other users. These profiles are images drawn using <a href="https://pillow.readthedocs.io/en/stable/">Pillow</a>, a Python library for image manipulation.</p>
+
+<p><img src="/assets/images/breqbot/vex.png" alt="" class="actual-size" />
+Breqbot can pull Vex Robotics Competition data from <a href="https://vexdb.io/" target="_blank">VexDB</a> and create a summary of a team’s performance. Here’s my team from 2019-2020.</p>
+
+<p><img src="/assets/images/breqbot/xkcd.png" alt="" class="actual-size" />
+Breqbot can share comics from a few series including the famous <a href="https://xkcd.com/" target="_blank">xkcd</a>. Additionally, a worker task will continuously monitor these comics for updates, and it can be configured to automatically post them to certain channels.</p>
+
+<p><img src="/assets/images/breqbot/soundboard.png" alt="" class="actual-size" />
+The Soundboard app lets server members add sounds (in the form of YouTube links) and corresponding emoji. Then, if someone reacts to the soundboard using that emoji, the corresponding sound will play in the server’s voice channel.</p>
+
+<p><img src="/assets/images/breqbot/roles.png" alt="" class="actual-size" />
+Discord has a powerful “Roles” feature to help identify members of a server, but it does not have a way for users to assign themselves roles. Breqbot provides a “reaction roles” menu system - by reacting to this message, a user can select which roles they would like to receive, and Breqbot will automatically modify their roles as necessary.</p>
+
+<h3 id="the-redis-instance">The Redis Instance</h3>
+
+<p>Most of Breqbot’s features rely on <a href="https://redis.io/" target="_blank">Redis</a> to store user data. For example, the role menu will store the set of messages it needs to watch reactions for, and the profile feature will store a user’s configuration in Redis. This allows the Discord worker to be restarted at any time with minimal disruption.</p>
+
+<p><img src="/assets/images/breqbot/reddit.png" alt="" class="actual-size" /></p>
+
+<p>One notable use of Redis is to cache Reddit posts. Breqbot uses <a href="https://praw.readthedocs.io/en/latest/" target="_blank">PRAW</a> to automatically retrieve popular posts from Reddit to display. However, the Reddit API is slow, and it does not provide a method to choose a random popular post. Because of this, Breqbot uses a background task to periodically retrieve the 100 most popular posts from a variety of subreddits and store them in Redis. Then, when a user requests a post from one of these subreddits, Breqbot can simply retrieve it from its cache.</p>
+
+<h3 id="the-web-process">The Web Process</h3>
+
+<p><img src="/assets/images/breqbot/website.png" alt="" /></p>
+
+<p>The web process runs Breqbot’s accompanying website. If a Discord server chooses to enable it, Breqbot can publish information about that server’s economy and its members to a website URL. The web process will use Redis to get this information - it does not communicate directly with the Discord worker.</p>
+
+<p><img src="/assets/images/breqbot/portal.png" alt="" class="actual-size" />
+The Portal API allows other programs to connect to a Breqbot instance to provide additional functionality. In this example, the Portal (which was hosted on my laptop) will echo back any input it receives. A more practical use of this would be to build functionality that interacts with the real world, such as a remote-control robot that communicates over Discord.</p>
+
+<p>Portal clients connect to Breqbot using WebSockets, which are handled by the web process. Requests and responses are sent between the Discord and Web processes through a Redis pub/sub channel. Management of Portal clients, including distribution of API keys, is handled by the Discord worker: if a user wants to register a new portal, they will receive their API keys through a direct message on Discord.</p>
+
+<h2 id="results">Results</h2>
+
+<p>This was my first project that ended up being used by such a wide audience: many of my friends added it to their communities on Discord, and people were constantly requesting functionality or finding bugs. I really enjoyed the experience of developing this and using it with my friends, though, and it was rewarding to see other people enjoying my work.</p>
+
+
+
+</div>
+<br>
+
+
+  <div class="footer">
+    <div class="container">
+        <br>
+        <br>
+        <p>
+            made with <i class="fas fa-heart" aria-hidden="true"></i>
+            <span class="sr-only">love</span> by breq,
+
+            <i class="far fa-copyright" aria-hidden="true"></i>
+            <span class="sr-only">copyright</span> 2020,
+
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <span class="sr-only">github</span>
+            <a href="https://github.com/Breq16/breq.dev" target="_blank">Breq16/breq.dev</a>
+        </p>
+        <br>
+        <p>
+            
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span class="sr-only">email</span>
+            
+            <a href="mailto:breq@breq.dev" target="_blank">breq@breq.dev</a>
+            
+            •
+            
+            <i class="fab fa-discord" aria-hidden="true"></i>
+            <span class="sr-only">discord</span>
+            
+            <span>Breq#8296</span>
+            
+            •
+            
+            <i class="fab fa-keybase" aria-hidden="true"></i>
+            <span class="sr-only">keybase</span>
+            
+            <a href="https://keybase.io/breq" target="_blank">breq</a>
+            
+            •
+            
+
+            <a href="/contact" target="_blank">more
+            <i class="fas fa-angle-double-right" aria-hidden="true"></i></a>
+        </p>
+        <br>
+        <br>
+    </div>
+</div>
+
+
+</body>
+
+</html>

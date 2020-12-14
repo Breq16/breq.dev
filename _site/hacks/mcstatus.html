@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+<!-- mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png" />
+<link rel="manifest" href="/assets/icons/site.webmanifest" />
+<link rel="shortcut icon" href="/assets/icons/favicon.ico" />
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml" />
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- fontawesome -->
+<script src="https://kit.fontawesome.com/69d45d8e8c.js" crossorigin="anonymous"></script>
+
+<!-- google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+
+<!-- site-specific -->
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+  
+      <title>McStatus.js</title>
+  
+</head>
+
+<body>
+
+  <div class="navbar sticky-top navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="/">breq.dev</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fas fa-hamburger"></span> <!-- haha, hamburger menu -->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                
+                    <li class="nav-item">
+                        <a
+                            class="nav-link "
+                            href="/projects">
+                            projects</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a
+                            class="nav-link nav-active"
+                            href="/hacks">
+                            hacks</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a
+                            class="nav-link "
+                            href="/archives">
+                            archives</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a
+                            class="nav-link "
+                            href="/contact">
+                            contact</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+  <br>
+<div class="container page">
+
+<h1>McStatus.js</h1>
+
+    <p>A JavaScript library to embed information about a Minecraft server into a website.</p>
+
+
+
+
+
+
+
+<div class="row">
+    
+    <div class="col-xl-4 col-lg-6 col-md-6">
+        <div class="bordered-box">
+            <span>Project Date</span>
+            <h3><i class="fas fa-calendar"></i> 2020</h3>
+        </div>
+    </div>
+    
+    
+    <div class="col-xl-4 col-lg-6 col-md-6">
+        <div class="bordered-box">
+            <h3><i class="fab fa-github"></i> View Source Code</h3>
+            <span>
+                <a target="_blank" href="https://github.com/Breq16/mcstatus">Breq16/mcstatus</a>
+            </span>
+        </div>
+    </div>
+    
+    
+    <div class="col-xl-4 col-lg-6 col-md-6">
+        <div class="bordered-box">
+            <h3><i class="fas fa-laptop"></i> View Hosted Demo</h3>
+            <span>
+                <a target="_blank" href="https://mcstatus.breq.dev/">https://mcstatus.breq.dev/</a>
+            </span>
+        </div>
+    </div>
+    
+</div>
+
+
+<link rel="stylesheet" href="/assets/css/mcstatus.css" />
+
+<script type="text/javascript" src="https://breq16.github.io/mcstatus/mcstatus.js"></script>
+
+<h2 id="overview">Overview</h2>
+
+<p>McStatus.js is a JavaScript library and API backend to embed a Minecraft server status readout.</p>
+
+<h2 id="demo">Demo</h2>
+
+<p>Here are a few popular Minecraft servers (Hypixel and Mineplex):</p>
+
+<div class="mc-status" data-mc-server="mc.hypixel.net"></div>
+
+<div class="mc-status" data-mc-server="us.mineplex.com"></div>
+
+<p>One that I run (you might see me or some of my friends on here):</p>
+
+<div class="mc-status" data-mc-server="breq.dev"></div>
+
+<p>One that doesn’t exist (so you can see how a failed connection)</p>
+
+<div class="mc-status" data-mc-server="not-a-real-server.example.com"></div>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>I wanted to be able to check who was online on my Minecraft server without having to join. I also wanted a project where I could improve my understanding of JavaScript, the DOM, and web technologies in general.</p>
+
+<h2 id="technical-details">Technical Details</h2>
+
+<p><code class="language-plaintext highlighter-rouge">mcstatus.js</code> loads a div complete with Minecraft server information into the DOM wherever it finds a <code class="language-plaintext highlighter-rouge">&lt;div class="mc-status"&gt;</code>, using the <code class="language-plaintext highlighter-rouge">data-mc-server</code> attr to set the server IP. The status protocol for Minecraft servers uses raw TCP sockets, so a pure-JS server query-er isn’t possible. There are a lot of existing Minecraft server status tools, like <a href="https://api.mcsrvstat.us/" target="_blank">mcsrvstat.us</a>, but they don’t have a CORS header set, so they couldn’t be used from JavaScript. So, I implemented my own at <code class="language-plaintext highlighter-rouge">https://mcstatus.breq.dev/</code> with the bare minimum API for this project to work. I’m using Dinnerbone’s <a href="https://github.com/Dinnerbone/mcstatus" target="_blank">Server Pinger</a> under the hood for this.</p>
+
+<h2 id="results">Results</h2>
+
+<p>It pretty much does everything I wanted it to do, and working on the project definitely gave me a better understanding of how to style websites using CSS. I didn’t really end up using the CSS/JS part for anything, but I did use the server component for <a href="/projects/breqbot" target="_blank">Breqbot</a>’s Minecraft server functionality.</p>
+
+
+
+</div>
+<br>
+
+
+  <div class="footer">
+    <div class="container">
+        <br>
+        <br>
+        <p>
+            made with <i class="fas fa-heart" aria-hidden="true"></i>
+            <span class="sr-only">love</span> by breq,
+
+            <i class="far fa-copyright" aria-hidden="true"></i>
+            <span class="sr-only">copyright</span> 2020,
+
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <span class="sr-only">github</span>
+            <a href="https://github.com/Breq16/breq.dev" target="_blank">Breq16/breq.dev</a>
+        </p>
+        <br>
+        <p>
+            
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span class="sr-only">email</span>
+            
+            <a href="mailto:breq@breq.dev" target="_blank">breq@breq.dev</a>
+            
+            •
+            
+            <i class="fab fa-discord" aria-hidden="true"></i>
+            <span class="sr-only">discord</span>
+            
+            <span>Breq#8296</span>
+            
+            •
+            
+            <i class="fab fa-keybase" aria-hidden="true"></i>
+            <span class="sr-only">keybase</span>
+            
+            <a href="https://keybase.io/breq" target="_blank">breq</a>
+            
+            •
+            
+
+            <a href="/contact" target="_blank">more
+            <i class="fas fa-angle-double-right" aria-hidden="true"></i></a>
+        </p>
+        <br>
+        <br>
+    </div>
+</div>
+
+
+</body>
+
+</html>
