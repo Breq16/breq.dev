@@ -1,0 +1,13 @@
+email:
+    icon: fas fa-envelope
+    link: mailto:breq@breq.dev
+    text: breq@breq.dev
+
+discord:
+    icon: fab fa-discord
+    text: Breq#8296
+
+keybase:
+    icon: fab fa-keybase
+    link: https://keybase.io/breq
+    text: breq

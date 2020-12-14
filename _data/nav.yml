@@ -1,0 +1,9 @@
+navbar:
+    - name: projects
+      url: /projects
+    - name: hacks
+      url: /hacks
+    - name: archives
+      url: /archives
+    - name: contact
+      url: /contact

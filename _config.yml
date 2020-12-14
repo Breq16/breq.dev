@@ -1,0 +1,9 @@
+theme: jekyll-theme-breq
+
+collections:
+    projects:
+        output: true
+    hacks:
+        output: true
+    archives:
+        output: true

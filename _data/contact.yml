@@ -1,0 +1,40 @@
+discord:
+    sr: discord
+    icon: fab fa-discord
+    username: Breq#8296
+
+keybase:
+    sr: keybase
+    icon: fab fa-keybase
+    username: Breq
+    link: https://keybase.io/breq
+
+email:
+    sr: email
+    icon: fas fa-envelope
+    username: breq@breq.dev
+    link: mailto:breq@breq.dev
+
+google:
+    sr: google
+    icon: fab fa-google
+    username: wesleyjchalmers
+    link: mailto:wesleyjchalmers@gmail.com
+
+reddit:
+    sr: reddit
+    icon: fab fa-reddit
+    username: Breq16
+    link: https://reddit.com/u/Breq16
+
+twitter:
+    sr: twitter
+    icon: fab fa-twitter
+    username: breqdev
+    link: https://twitter.com/breqdev
+
+tumblr:
+    sr: tumblr
+    icon: fab fa-tumblr
+    username: breq
+    link: https://breq.tumblr.com/
