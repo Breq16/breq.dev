@@ -2,13 +2,13 @@
 layout: project
 title: MakerGamer
 subtitle: A "fantasy console" built for tinkering.
-image: /assets/images/stemfair/makergamer.jpg
+image: /assets/images/archives/makergamer.jpg
 created: 2016-17
 repo: Breq16/makergamer
 status: old
 ---
 
-![](/assets/images/stemfair/makergamer.jpg)
+![](/assets/images/archives/makergamer.jpg)
 
 MakerGamer running on a PocketCHIP
 {: .caption}

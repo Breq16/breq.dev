@@ -4,9 +4,8 @@ title: AutoRedditor
 subtitle: A service for caching and providing random Reddit posts.
 created: 2020
 repo: Breq16/redditor
+demo: https://redditor.breq.dev/
 ---
-
-This project is currently live at [redditor.breq.dev](https://redditor.breq.dev/).
 
 ## Overview
 
@@ -14,7 +13,7 @@ This is a service to cache and retrieve Reddit posts.
 
 ## Motivation
 
-When I started to work on [Breqbot](/recent/breqbot), I wanted to return popular posts from Reddit. However, the Reddit API doesn't provide a "random popular" function. The closest options were to retrieve either a random post, which could be low-quality, or the top posts of a certain time period, which will repeatedly return the same posts.
+When I started to work on [Breqbot](/projects/breqbot), I wanted to return popular posts from Reddit. However, the Reddit API doesn't provide a "random popular" function. The closest options were to retrieve either a random post, which could be low-quality, or the top posts of a certain time period, which will repeatedly return the same posts.
 
 So, when I started to implement Breqbot's Reddit feature, I added a built-in cache feature. Every couple hours, a background process would retrieve the top 100 posts from each subreddit and cache each post ID in a database. Then, when a user requests a Reddit post, the bot will query the database for a random post.
 
