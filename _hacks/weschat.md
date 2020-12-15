@@ -1,5 +1,6 @@
 ---
 layout: project
+title: WesChat
 subtitle: A chatroom app with chatrooms, nicknames, and other features.
 image: /assets/images/weschat.png
 created: 2017

@@ -1,5 +1,6 @@
 ---
 layout: project
+title: STMusic
 subtitle: A Guitar-Hero-style game built for the ST Discovery board.
 video: /assets/videos/music-game.webm
 created: 2020

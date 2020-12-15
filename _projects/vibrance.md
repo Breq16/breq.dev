@@ -60,7 +60,7 @@ Users supply Scripts (written in Python) that describe how to translate inputs f
 
 For example, here is an example script that flashes zones 1 and 2, with a 1 second delay in between, whenever MIDI note 60 is received:
 
-```
+{% highlight python %}
 @api.on("midi", "note_on_60")
 def animation(event):
     api.color(1, "FFF")
@@ -68,7 +68,7 @@ def animation(event):
     api.wait(1)
     api.color(2, "FFF")
     api.color((1, 3, 4), "000")
-```
+{% endhighlight %}
 
 A variety of example scripts are provided by Vibrance.
 
