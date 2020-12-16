@@ -31,13 +31,14 @@
 <link rel="stylesheet" href="/assets/css/styles.css" />
 
   
-      <title>Blog</title>
+      <title>WesChat</title>
   
 </head>
 
 <body>
 
-  <div class="navbar sticky-top navbar-expand-lg">
+    <div class="content-wrap">
+        <div class="navbar sticky-top navbar-expand-lg">
     <div class="container">
         <a class="navbar-brand" href="/">breq.dev</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -56,7 +57,7 @@
                 
                     <li class="nav-item">
                         <a
-                            class="nav-link "
+                            class="nav-link nav-active"
                             href="/hacks">
                             hacks</a>
                     </li>
@@ -66,6 +67,13 @@
                             class="nav-link "
                             href="/archives">
                             archives</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a
+                            class="nav-link "
+                            href="/featured">
+                            featured</a>
                     </li>
                 
                     <li class="nav-item">
@@ -81,22 +89,74 @@
 </div>
 
 
-  <br>
+        <br>
 <div class="container page">
 
-<h1 id="latest-from-the-blog">Latest from the blog</h1>
+<h1>WesChat</h1>
 
-<p>I’m not sure if I’ll ever actually post anything here, to be honest. Don’t hold your breath.</p>
+    <p>A chatroom app with chatrooms, nicknames, and other features.</p>
 
 
+
+<div class="alert alert-warning" role="alert">
+    This project is old and in a state of disrepair.
+    It's been included for the sake of posterity,
+    but the code and docs aren't up to my current standards.
+    Feel free to poke around, but don't expect something polished (or even functional)!
+</div>
+
+
+
+
+
+<div class="row">
+    
+    <div class="col-xl-4 col-lg-6 col-md-6">
+        <div class="bordered-box">
+            <span>Project Date</span>
+            <h3><i class="fas fa-calendar"></i> 2017</h3>
+        </div>
+    </div>
+    
+    
+    <div class="col-xl-4 col-lg-6 col-md-6">
+        <div class="bordered-box">
+            <h3><i class="fab fa-github"></i> View Source Code</h3>
+            <span>
+                <a target="_blank" href="https://github.com/Breq16/WesChat">Breq16/WesChat</a>
+            </span>
+        </div>
+    </div>
+    
+    
+</div>
+
+
+<p><img src="/assets/images/weschat.png" alt="" /></p>
+
+<h2 id="overview">Overview</h2>
+
+<p>This is a simple, graphical chatroom app with a few basic features such as dynamic chatrooms, custom theme support, and a client API for making custom clients.</p>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>This was a project I worked on to learn the basis of networking and GUI creation, back when I had first started to learn Python. I wanted to make a project I could use to control other project over the network without having to worry about the intricacies of using sockets.</p>
+
+<h2 id="technical-description">Technical Description</h2>
+
+<p>There’s not a whole lot to say here. The chat app is split into a server and client. The server handles commands (such as commands to join or leave a room), the client does not keep track of what room it is in. The client loads themes as JSON files which contain information about fonts and colors to use. No encryption is used (because this is an old project and I didn’t exactly understand SSL at the time).</p>
+
+<h2 id="results">Results</h2>
+
+<p>It worked pretty well. I tried running it publicly on a virtual private server that my dad let me use, but it crashed after a while when some bot opened a bunch of simultaneous connections to it. It was still a great learning experience that helped me develop my Python skills.</p>
 
 
 
 </div>
 <br>
 
-
-  <div class="footer">
+    </div>
+    <div class="footer">
     <div class="container">
         <br>
         <br>
@@ -143,7 +203,6 @@
         <br>
     </div>
 </div>
-
 
 </body>
 

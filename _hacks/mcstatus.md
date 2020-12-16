@@ -41,4 +41,4 @@ I wanted to be able to check who was online on my Minecraft server without havin
 
 ## Results
 
-It pretty much does everything I wanted it to do, and working on the project definitely gave me a better understanding of how to style websites using CSS. I didn't really end up using the CSS/JS part for anything, but I did use the server component for [Breqbot](/projects/breqbot){:target="_blank"}'s Minecraft server functionality.
+It pretty much does everything I wanted it to do, and working on the project definitely gave me a better understanding of how to style websites using CSS. I didn't really end up using the CSS/JS part for anything, but I did use the server component for [Breqbot]({% link _projects/breqbot.md %}){:target="_blank"}'s Minecraft server functionality.

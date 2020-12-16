@@ -31,13 +31,14 @@
 <link rel="stylesheet" href="/assets/css/styles.css" />
 
   
-      <title>MakerGamer</title>
+      <title>R2D2 Clone</title>
   
 </head>
 
 <body>
 
-  <div class="navbar sticky-top navbar-expand-lg">
+    <div class="content-wrap">
+        <div class="navbar sticky-top navbar-expand-lg">
     <div class="container">
         <a class="navbar-brand" href="/">breq.dev</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -71,6 +72,13 @@
                     <li class="nav-item">
                         <a
                             class="nav-link "
+                            href="/featured">
+                            featured</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a
+                            class="nav-link "
                             href="/contact">
                             contact</a>
                     </li>
@@ -81,21 +89,14 @@
 </div>
 
 
-  <br>
+        <br>
 <div class="container page">
 
-<h1>MakerGamer</h1>
+<h1>R2D2 Clone</h1>
 
-    <p>A "fantasy console" built for tinkering.</p>
+    <p>Made of an old plastic bucket.</p>
 
 
-
-<div class="alert alert-warning" role="alert">
-    This project is old and in a state of disrepair.
-    It's been included for the sake of posterity,
-    but the code and docs aren't up to my current standards.
-    Feel free to poke around, but don't expect something polished (or even functional)!
-</div>
 
 
 
@@ -106,48 +107,44 @@
     <div class="col-xl-4 col-lg-6 col-md-6">
         <div class="bordered-box">
             <span>Project Date</span>
-            <h3><i class="fas fa-calendar"></i> 2016-17</h3>
+            <h3><i class="fas fa-calendar"></i> 2016</h3>
         </div>
     </div>
     
-    
-    <div class="col-xl-4 col-lg-6 col-md-6">
-        <div class="bordered-box">
-            <h3><i class="fab fa-github"></i> View Source Code</h3>
-            <span>
-                <a target="_blank" href="https://github.com/Breq16/makergamer">Breq16/makergamer</a>
-            </span>
-        </div>
-    </div>
     
     
 </div>
 
 
-<p><img src="/assets/images/archives/makergamer.jpg" alt="" /></p>
+<p><img src="/assets/images/archives/r2d2.jpg" alt="" /></p>
 
-<p class="caption">MakerGamer running on a PocketCHIP</p>
+<p class="caption">If you’re wondering, the chassis is an old Play-Doh bucket.</p>
 
 <h2 id="overview">Overview</h2>
-<p>MakerGamer was a virtual video game console designed to make game development as simple as possible and to encourage the sharing of games. It could play games written in Scratch, Python, and JavaScript, and it provided simple tools to modify the games people downloaded. I wrote it with the intent of running it on Next Thing Co.’s <a href="https://www.theverge.com/circuitbreaker/2016/7/19/12227806/pocketchip-review-portable-linux-computer" target="_blank">PocketCHIP</a>.</p>
+
+<p>Exactly what it says on the tin: a remote-controlled robot built to look like R2D2. As time went on, I did add some more advanced features, such as text-to-speech and video streaming.</p>
 
 <h2 id="motivation">Motivation</h2>
-<p>This project was inspired by Pico-8, a “fantasy console” that allowed people to write retro-feeling games for modern hardware. However, the learning curve for using Pico-8 was high, and I thought it would be cool to create something in the style of Pico-8 but that would be suitable for people learning to code for the first time. I set out to create a similar “fantasy console” that could play games written in Scratch but felt like a traditional video game console.</p>
+
+<p>This was made for several occasions: the STEM fair, and Halloween later that year when I went trick-or-treating as Luke Skywalker.</p>
 
 <h2 id="technical-description">Technical Description</h2>
-<p>I designed and programmed an interface for downloading Scratch projects by the project ID, adding them to a virtual library, and playing them on demand, using <a href="https://phosphorus.github.io/" target="_blank">Phosphorous</a> to run then without Adobe Flash. Python games written using PyGame were executed with parameters set to make PyGame full screen. Web-based games were simply downloaded and opened in a web browser. The user interface (main menu, project editors, etc) and the code editor were written in Python using PyGame.</p>
+
+<p>I started with the guts of an earlier robot I had built: two Lego NXT motors, connected to a Raspberry Pi through an H-Bridge motor driver. I spent a lot of time adding features to this robot: it could be controlled using a Wii remote, a smartphone app, or an interactive website. It had speech synthesis software and an internal speaker, a camera mounted to allow video streaming, and a few LEDs for blinkenlights.</p>
+
+<p>By the end of the project, I had switched to using an NXT brain to control the motors, connected over USB to the Raspberry Pi.</p>
 
 <h2 id="results">Results</h2>
 
-<p>It worked well enough for me to demo it to people at the STEM fair. But it didn’t really have that much actual use, as all the games could just be played in a web browser. I eventually scrapped plans to finish the project-editing functionality, as it wasn’t practical to write a code editor, image editor, and etc. that only ran on a tiny screen anyway.</p>
+<p>It did its job and did it well. This project was one of the first significant software projects I worked on, and it taught me how to design and organize a program longer than just a few lines.</p>
 
 
 
 </div>
 <br>
 
-
-  <div class="footer">
+    </div>
+    <div class="footer">
     <div class="container">
         <br>
         <br>
@@ -194,7 +191,6 @@
         <br>
     </div>
 </div>
-
 
 </body>
 

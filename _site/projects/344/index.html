@@ -31,13 +31,14 @@
 <link rel="stylesheet" href="/assets/css/styles.css" />
 
   
-      <title>McStatus.js</title>
+      <title>Red Storm Robotics</title>
   
 </head>
 
 <body>
 
-  <div class="navbar sticky-top navbar-expand-lg">
+    <div class="content-wrap">
+        <div class="navbar sticky-top navbar-expand-lg">
     <div class="container">
         <a class="navbar-brand" href="/">breq.dev</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -49,14 +50,14 @@
                 
                     <li class="nav-item">
                         <a
-                            class="nav-link "
+                            class="nav-link nav-active"
                             href="/projects">
                             projects</a>
                     </li>
                 
                     <li class="nav-item">
                         <a
-                            class="nav-link nav-active"
+                            class="nav-link "
                             href="/hacks">
                             hacks</a>
                     </li>
@@ -66,6 +67,13 @@
                             class="nav-link "
                             href="/archives">
                             archives</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a
+                            class="nav-link "
+                            href="/featured">
+                            featured</a>
                     </li>
                 
                     <li class="nav-item">
@@ -81,12 +89,12 @@
 </div>
 
 
-  <br>
+        <br>
 <div class="container page">
 
-<h1>McStatus.js</h1>
+<h1>Red Storm Robotics</h1>
 
-    <p>A JavaScript library to embed information about a Minecraft server into a website.</p>
+    <p>I helped start one of VRC Maine's youngest and strongest teams.</p>
 
 
 
@@ -99,7 +107,7 @@
     <div class="col-xl-4 col-lg-6 col-md-6">
         <div class="bordered-box">
             <span>Project Date</span>
-            <h3><i class="fas fa-calendar"></i> 2020</h3>
+            <h3><i class="fas fa-calendar"></i> 2019-20</h3>
         </div>
     </div>
     
@@ -108,67 +116,36 @@
         <div class="bordered-box">
             <h3><i class="fab fa-github"></i> View Source Code</h3>
             <span>
-                <a target="_blank" href="https://github.com/Breq16/mcstatus">Breq16/mcstatus</a>
+                <a target="_blank" href="https://github.com/Red-Storm-Robotics/344R-TT">Red-Storm-Robotics/344R-TT</a>
             </span>
         </div>
     </div>
     
-    
-    <div class="col-xl-4 col-lg-6 col-md-6">
-        <div class="bordered-box">
-            <h3><i class="fas fa-laptop"></i> View Hosted Demo</h3>
-            <span>
-                <a target="_blank" href="https://mcstatus.breq.dev/">https://mcstatus.breq.dev/</a>
-            </span>
-        </div>
-    </div>
     
 </div>
 
 
-<link rel="stylesheet" href="/assets/css/mcstatus.css" />
+<div class="iframe-container">
+    <iframe src="https://www.youtube.com/embed/EVbv0NNOtKE?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
 
-<script type="text/javascript" src="https://breq16.github.io/mcstatus/mcstatus.js"></script>
+<p class="caption">Here’s a video of teams 4393X and 4393Z vs. 344R and 344X. At the time, I was on team 344R. 4393X was made up of the people I worked with back at MSSM.</p>
 
-<h2 id="overview">Overview</h2>
+<p>When I returned to Scarborough, I worked with the engineering teacher to start a VRC team. I helped with searching for and applying for grants, ordering parts, and building out a workspace. I then took on a leadership role in Team 344X where I helped show my teammates how to design solutions with VEX parts, how to build efficiently, how to program the robots, and (above all) how to think critically about a challenge.</p>
 
-<p>McStatus.js is a JavaScript library and API backend to embed a Minecraft server status readout.</p>
+<p>In January, the team raised enough money from grants to spin off a second team, 344R. Several other students and I built a second robot (effectively starting halfway through the competition season) and competed under that number, eventually qualifying for the state championship and the world championship (both of which were canceled due to COVID-19).</p>
 
-<h2 id="demo">Demo</h2>
+<p>In summer 2020, I decided to give back to the VRC community by contributing code to OkapiLib, a library used by hundreds of VEX teams for advanced functions such as motion profiling, PID control, and asynchronous movement. Notably, the 2019 World Skills Champions used OkapiLib for path generation in their Programming Skills routine. The library has almost ten thousand downloads on GitHub.</p>
 
-<p>Here are a few popular Minecraft servers (Hypixel and Mineplex):</p>
-
-<div class="mc-status" data-mc-server="mc.hypixel.net"></div>
-
-<div class="mc-status" data-mc-server="us.mineplex.com"></div>
-
-<p>One that I run (you might see me or some of my friends on here):</p>
-
-<div class="mc-status" data-mc-server="breq.dev"></div>
-
-<p>One that doesn’t exist (so you can see how a failed connection)</p>
-
-<div class="mc-status" data-mc-server="not-a-real-server.example.com"></div>
-
-<h2 id="motivation">Motivation</h2>
-
-<p>I wanted to be able to check who was online on my Minecraft server without having to join. I also wanted a project where I could improve my understanding of JavaScript, the DOM, and web technologies in general.</p>
-
-<h2 id="technical-details">Technical Details</h2>
-
-<p><code class="language-plaintext highlighter-rouge">mcstatus.js</code> loads a div complete with Minecraft server information into the DOM wherever it finds a <code class="language-plaintext highlighter-rouge">&lt;div class="mc-status"&gt;</code>, using the <code class="language-plaintext highlighter-rouge">data-mc-server</code> attr to set the server IP. The status protocol for Minecraft servers uses raw TCP sockets, so a pure-JS server query-er isn’t possible. There are a lot of existing Minecraft server status tools, like <a href="https://api.mcsrvstat.us/" target="_blank">mcsrvstat.us</a>, but they don’t have a CORS header set, so they couldn’t be used from JavaScript. So, I implemented my own at <code class="language-plaintext highlighter-rouge">https://mcstatus.breq.dev/</code> with the bare minimum API for this project to work. I’m using Dinnerbone’s <a href="https://github.com/Dinnerbone/mcstatus" target="_blank">Server Pinger</a> under the hood for this.</p>
-
-<h2 id="results">Results</h2>
-
-<p>It pretty much does everything I wanted it to do, and working on the project definitely gave me a better understanding of how to style websites using CSS. I didn’t really end up using the CSS/JS part for anything, but I did use the server component for <a href="/projects/breqbot" target="_blank">Breqbot</a>’s Minecraft server functionality.</p>
+<p>My <a href="https://github.com/OkapiLib/OkapiLib/pull/445" target="_blank">pull request</a> added support for trigonometry, rounding, exponentiation, and other math functions to OkapiLib’s units API. Code that uses this API is checked at compile-time for common units errors, eliminating most mistakes caused when a programmer enters a formula incorrectly. My addition of math functions allows users to write formulas that use more than just the simple four functions (add, subtract, multiply, divide) without sacrificing this compile-time units checking.</p>
 
 
 
 </div>
 <br>
 
-
-  <div class="footer">
+    </div>
+    <div class="footer">
     <div class="container">
         <br>
         <br>
@@ -215,7 +192,6 @@
         <br>
     </div>
 </div>
-
 
 </body>
 

@@ -31,13 +31,14 @@
 <link rel="stylesheet" href="/assets/css/styles.css" />
 
   
-      <title>BlockChat</title>
+      <title>MakerGamer</title>
   
 </head>
 
 <body>
 
-  <div class="navbar sticky-top navbar-expand-lg">
+    <div class="content-wrap">
+        <div class="navbar sticky-top navbar-expand-lg">
     <div class="container">
         <a class="navbar-brand" href="/">breq.dev</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -56,16 +57,23 @@
                 
                     <li class="nav-item">
                         <a
-                            class="nav-link nav-active"
+                            class="nav-link "
                             href="/hacks">
                             hacks</a>
                     </li>
                 
                     <li class="nav-item">
                         <a
-                            class="nav-link "
+                            class="nav-link nav-active"
                             href="/archives">
                             archives</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a
+                            class="nav-link "
+                            href="/featured">
+                            featured</a>
                     </li>
                 
                     <li class="nav-item">
@@ -81,12 +89,12 @@
 </div>
 
 
-  <br>
+        <br>
 <div class="container page">
 
-<h1>BlockChat</h1>
+<h1>MakerGamer</h1>
 
-    <p>A simple Blockchain-based chat app.</p>
+    <p>A "fantasy console" built for tinkering.</p>
 
 
 
@@ -106,7 +114,7 @@
     <div class="col-xl-4 col-lg-6 col-md-6">
         <div class="bordered-box">
             <span>Project Date</span>
-            <h3><i class="fas fa-calendar"></i> 2018</h3>
+            <h3><i class="fas fa-calendar"></i> 2016-17</h3>
         </div>
     </div>
     
@@ -115,7 +123,7 @@
         <div class="bordered-box">
             <h3><i class="fab fa-github"></i> View Source Code</h3>
             <span>
-                <a target="_blank" href="https://github.com/Breq16/blockchat">Breq16/blockchat</a>
+                <a target="_blank" href="https://github.com/Breq16/makergamer">Breq16/makergamer</a>
             </span>
         </div>
     </div>
@@ -124,49 +132,30 @@
 </div>
 
 
-<p><img src="/assets/images/blockchat.png" alt="" /></p>
+<p><img src="/assets/images/archives/makergamer.jpg" alt="" /></p>
 
-<h2 id="description">Description</h2>
+<p class="caption">MakerGamer running on a PocketCHIP</p>
 
-<p>BlockChat is a simple decentralized chatroom application that uses a blockchain to store the message data.</p>
+<h2 id="overview">Overview</h2>
+<p>MakerGamer was a virtual video game console designed to make game development as simple as possible and to encourage the sharing of games. It could play games written in Scratch, Python, and JavaScript, and it provided simple tools to modify the games people downloaded. I wrote it with the intent of running it on Next Thing Co.’s <a href="https://www.theverge.com/circuitbreaker/2016/7/19/12227806/pocketchip-review-portable-linux-computer" target="_blank">PocketCHIP</a>.</p>
 
 <h2 id="motivation">Motivation</h2>
-
-<p>This project was something I quickly threw together in order to better understand blockchain while the Bitcoin boom was taking place. I couldn’t find a resource that explained proof-of-work, consensus, and other blockchain-related topics well enough for me to understand them, so I decided to try making my own blockchain application, loosely based around a couple of examples I saw around the Internet.</p>
+<p>This project was inspired by Pico-8, a “fantasy console” that allowed people to write retro-feeling games for modern hardware. However, the learning curve for using Pico-8 was high, and I thought it would be cool to create something in the style of Pico-8 but that would be suitable for people learning to code for the first time. I set out to create a similar “fantasy console” that could play games written in Scratch but felt like a traditional video game console.</p>
 
 <h2 id="technical-description">Technical Description</h2>
-
-<p>At its core, a blockchain is just a distributed, public ledger, so I decided that the easiest blockchain application to write would be a chatroom. At the time, it seemed much easier than a digital token or currency system.</p>
-
-<p>I started by implementing the blockchain data structure. As the name implies, this is a chain of blocks, where each new block contains the cryptographic hash of the previous block, so that old data cannot be modified without also re-writing all of the new data.</p>
-
-<p>Then, I moved on to the proof-of-work algorithm. This algorithm is designed to be computationally expensive so that new blocks take a significant amount of time to “mine”. Because of this, if somebody wanted to re-write a previous part of the blockchain, it would take a prohibitively large amount of computing power to then re-write all of the blocks that follow.</p>
-
-<p>For my proof-of-work algorithm, I decided to require finding an integer with a hash that starts with a certain number. Solutions to this are difficult to find (as miners have to blindly guess at what the number is) but easy to verify (just hash the potential number and see if the first digits match). To make sure no miner tries to re-use the same solution multiple times, I required each new solution to be a larger number than the previous one.</p>
-
-<p>I didn’t put too much effort into optimizing my miner implementation - it just uses a single CPU thread, sequentially searching numbers. In an actual blockchain scenario, this isn’t a good choice, as anyone who could just write a better miner (by using multiple CPU cores, GPUs, or even FPGAs) would then have much more computational power compared to the rest of the network. I also didn’t make the difficulty of the proof-of-work change in response to miner availability. This also isn’t a good idea for a real blockchain, as periods of low miner activity may not be able to mine new blocks quickly. Worse, if many more miners decided to mine my blockchain, a too-easy proof-of-work would make it easier for malicious miners to modify the blockchain.</p>
-
-<p>Next, I worked on the consensus algorithm. For a node to accept new blocks, it first needs to verify the proof-of-work values and hashes to ensure the chain it receives is valid. Assuming it is, the node needs to choose which version of the chain it should prefer. In my implementation, the node will simply choose the longest version.</p>
-
-<p>Finally, I needed to devise the protocol which would allow nodes to add messages to the blockchain and compare versions with other nodes. I decided to just use a REST API, because it was the easiest solution.</p>
+<p>I designed and programmed an interface for downloading Scratch projects by the project ID, adding them to a virtual library, and playing them on demand, using <a href="https://phosphorus.github.io/" target="_blank">Phosphorous</a> to run then without Adobe Flash. Python games written using PyGame were executed with parameters set to make PyGame full screen. Web-based games were simply downloaded and opened in a web browser. The user interface (main menu, project editors, etc) and the code editor were written in Python using PyGame.</p>
 
 <h2 id="results">Results</h2>
 
-<p>In the end, the program did work. However, there were a few corners I cut that made the end result kind of impractical.</p>
-
-<p>The first issue was that I did not include distinction between nodes and miners. In actual blockchains, nodes that want to put data on the blockchain will send that data to many different miners, so that their data would likely be included in the next block, regardless of which miner mined it. In my demo, in order for anybody to send a message to the chatroom, they have to be the one to mine the next block. If the blockchain is scaled beyond just a few miners, the chances of this happening would be nearly zero, so actually using the chatroom would be almost impossible.</p>
-
-<p>The second issue is the lack of reward for miners. Initially, this was one of the things I didn’t intend to include, because I wanted to keep things simple. But because the miners have no incentive to mine blocks, it would be difficult to get benevolent miners to participate in the blockchain, and it would be easy for “evil” miners to gain enough of a share of the computing power to undermine the stability provided by proof-of-work.</p>
-
-<p>While the end result wasn’t something practical to deploy, working on this project definitely helped me understand the underlying design of blockchain platforms. It also answered many questions I had about the technology, such as “Why do non-currency applications like <a href="https://en.wikipedia.org/wiki/Namecoin" target="_blank">Namecoin</a> still have tradeable tokens?” and “How exactly does proof-of-work ensure the stability of the blockchain system?”, so I would definitely consider it a success.</p>
+<p>It worked well enough for me to demo it to people at the STEM fair. But it didn’t really have that much actual use, as all the games could just be played in a web browser. I eventually scrapped plans to finish the project-editing functionality, as it wasn’t practical to write a code editor, image editor, and etc. that only ran on a tiny screen anyway.</p>
 
 
 
 </div>
 <br>
 
-
-  <div class="footer">
+    </div>
+    <div class="footer">
     <div class="container">
         <br>
         <br>
@@ -213,7 +202,6 @@
         <br>
     </div>
 </div>
-
 
 </body>
 

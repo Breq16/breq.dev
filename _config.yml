@@ -1,4 +1,5 @@
 theme: jekyll-theme-breq
+permalink: pretty
 
 collections:
     projects:

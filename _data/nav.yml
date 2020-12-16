@@ -5,5 +5,7 @@ navbar:
       url: /hacks
     - name: archives
       url: /archives
+    - name: featured
+      url: /featured
     - name: contact
       url: /contact

@@ -31,13 +31,14 @@
 <link rel="stylesheet" href="/assets/css/styles.css" />
 
   
-      <title>Pinewood Derby Car</title>
+      <title>Archives</title>
   
 </head>
 
 <body>
 
-  <div class="navbar sticky-top navbar-expand-lg">
+    <div class="content-wrap">
+        <div class="navbar sticky-top navbar-expand-lg">
     <div class="container">
         <a class="navbar-brand" href="/">breq.dev</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -71,6 +72,13 @@
                     <li class="nav-item">
                         <a
                             class="nav-link "
+                            href="/featured">
+                            featured</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a
+                            class="nav-link "
                             href="/contact">
                             contact</a>
                     </li>
@@ -81,71 +89,130 @@
 </div>
 
 
-  <br>
+        <br>
 <div class="container page">
 
-<h1>Pinewood Derby Car</h1>
+<h1 id="archives">Archives</h1>
 
-    <p>A model car full of blinkenlights that I programmed when I was a smol child.</p>
-
-
-
-<div class="alert alert-warning" role="alert">
-    This project is old and in a state of disrepair.
-    It's been included for the sake of posterity,
-    but the code and docs aren't up to my current standards.
-    Feel free to poke around, but don't expect something polished (or even functional)!
-</div>
-
-
-
+<p>Very old projects that I’m only mildly embarrased of.</p>
 
 
 <div class="row">
     
-    <div class="col-xl-4 col-lg-6 col-md-6">
-        <div class="bordered-box">
-            <span>Project Date</span>
-            <h3><i class="fas fa-calendar"></i> 2014</h3>
-        </div>
+    <div class="tile-col col-lg-6">
+        <a class="tile-link" href="/archives/makergamer/">
+            <div class="tile">
+
+                
+                
+                <img src="/assets/images/archives/makergamer.jpg" loading="lazy">
+                
+                
+
+
+                <div class="tile-tint tile-tint-"></div>
+
+
+                <div class="tile-caption">
+                    <h1>MakerGamer</h1>
+                    <p>A "fantasy console" built for tinkering.</p>
+                </div>
+
+
+                <div class="tile-cta d-none d-md-block">
+                    <span>More</span>
+                    &nbsp;
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </div>
+
+                <div class="tile-year d-none d-md-block">
+                    <i class="fas fa-calendar-alt"></i>
+                    &nbsp;
+                    <span>2016-17</span>
+                </div>
+            </div>
+        </a>
     </div>
     
-    
-    <div class="col-xl-4 col-lg-6 col-md-6">
-        <div class="bordered-box">
-            <h3><i class="fab fa-github"></i> View Source Code</h3>
-            <span>
-                <a target="_blank" href="https://github.com/Breq16/pinewood-derby-car">Breq16/pinewood-derby-car</a>
-            </span>
-        </div>
+    <div class="tile-col col-lg-6">
+        <a class="tile-link" href="/archives/pinewood-derby-car/">
+            <div class="tile">
+
+                
+                <video playsinline autoplay muted loop disablePictureInPicture>
+                    <source src="/assets/videos/pinewood-derby-car.webm" type="video/webm">
+                </video>
+                
+
+
+                <div class="tile-tint tile-tint-"></div>
+
+
+                <div class="tile-caption">
+                    <h1>Pinewood Derby Car</h1>
+                    <p>A model car full of blinkenlights that I programmed when I was a smol child.</p>
+                </div>
+
+
+                <div class="tile-cta d-none d-md-block">
+                    <span>More</span>
+                    &nbsp;
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </div>
+
+                <div class="tile-year d-none d-md-block">
+                    <i class="fas fa-calendar-alt"></i>
+                    &nbsp;
+                    <span>2014</span>
+                </div>
+            </div>
+        </a>
     </div>
     
+    <div class="tile-col col-lg-6">
+        <a class="tile-link" href="/archives/r2d2/">
+            <div class="tile">
+
+                
+                
+                <img src="/assets/images/archives/r2d2.jpg" loading="lazy">
+                
+                
+
+
+                <div class="tile-tint tile-tint-"></div>
+
+
+                <div class="tile-caption">
+                    <h1>R2D2 Clone</h1>
+                    <p>Made of an old plastic bucket.</p>
+                </div>
+
+
+                <div class="tile-cta d-none d-md-block">
+                    <span>More</span>
+                    &nbsp;
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </div>
+
+                <div class="tile-year d-none d-md-block">
+                    <i class="fas fa-calendar-alt"></i>
+                    &nbsp;
+                    <span>2016</span>
+                </div>
+            </div>
+        </a>
+    </div>
     
 </div>
-
-
-<div class="iframe-container">
-    <iframe src="https://www.youtube.com/embed/X23kVwWfueI?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-</div>
-
-<p class="caption">A quick video of the car in action.</p>
-
-<h2 id="motivation">Motivation</h2>
-<p>When I was a smol child in cub scouts, we had a competition to see who could build the fastest car. I didn’t really care about that, so I decided to try and make something cool instead using an Arduino I had recently gotten.</p>
-
-<h2 id="technical-description">Technical Description</h2>
-<p>Almost everything is wired directly up to the Arduino, except the LED matrix, which runs off of the I2C bus. I modified some example code to display an animation of flames scrolling across (that I had drawn up on some graph paper).</p>
-
-<h2 id="results">Results</h2>
-<p>I think I won an award for it? (To be honest it’s been so long that I can’t remember well). But I do remember the battery dying - I had used a small garage-door-opener battery in order to fit within the weight limit, and that ended up dying pretty quickly.</p>
 
 
 
 </div>
 <br>
 
-
-  <div class="footer">
+    </div>
+    <div class="footer">
     <div class="container">
         <br>
         <br>
@@ -192,7 +259,6 @@
         <br>
     </div>
 </div>
-
 
 </body>
 

@@ -31,13 +31,14 @@
 <link rel="stylesheet" href="/assets/css/styles.css" />
 
   
-      <title>R2D2 Clone</title>
+      <title>Snowflake</title>
   
 </head>
 
 <body>
 
-  <div class="navbar sticky-top navbar-expand-lg">
+    <div class="content-wrap">
+        <div class="navbar sticky-top navbar-expand-lg">
     <div class="container">
         <a class="navbar-brand" href="/">breq.dev</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -56,16 +57,23 @@
                 
                     <li class="nav-item">
                         <a
-                            class="nav-link "
+                            class="nav-link nav-active"
                             href="/hacks">
                             hacks</a>
                     </li>
                 
                     <li class="nav-item">
                         <a
-                            class="nav-link nav-active"
+                            class="nav-link "
                             href="/archives">
                             archives</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a
+                            class="nav-link "
+                            href="/featured">
+                            featured</a>
                     </li>
                 
                     <li class="nav-item">
@@ -81,12 +89,12 @@
 </div>
 
 
-  <br>
+        <br>
 <div class="container page">
 
-<h1>R2D2 Clone</h1>
+<h1>Snowflake</h1>
 
-    <p>Made of an old plastic bucket.</p>
+    <p>A scalable service to generate time-ordered, unique ID numbers.</p>
 
 
 
@@ -99,44 +107,58 @@
     <div class="col-xl-4 col-lg-6 col-md-6">
         <div class="bordered-box">
             <span>Project Date</span>
-            <h3><i class="fas fa-calendar"></i> 2016</h3>
+            <h3><i class="fas fa-calendar"></i> 2020</h3>
         </div>
     </div>
     
     
+    <div class="col-xl-4 col-lg-6 col-md-6">
+        <div class="bordered-box">
+            <h3><i class="fab fa-github"></i> View Source Code</h3>
+            <span>
+                <a target="_blank" href="https://github.com/Breq16/snowflake">Breq16/snowflake</a>
+            </span>
+        </div>
+    </div>
+    
+    
+    <div class="col-xl-4 col-lg-6 col-md-6">
+        <div class="bordered-box">
+            <h3><i class="fas fa-laptop"></i> View Hosted Demo</h3>
+            <span>
+                <a target="_blank" href="https://snowflake.breq.dev/">https://snowflake.breq.dev/</a>
+            </span>
+        </div>
+    </div>
     
 </div>
 
 
-<p><img src="/assets/images/archives/r2d2.jpg" alt="" /></p>
-
-<p class="caption">If you’re wondering, the chassis is an old Play-Doh bucket.</p>
-
 <h2 id="overview">Overview</h2>
 
-<p>Exactly what it says on the tin: a remote-controlled robot built to look like R2D2. As time went on, I did add some more advanced features, such as text-to-speech and video streaming.</p>
+<p>This is a service to generate Snowflake IDs. These are unique, time-ordered IDs, useful for things like instant messages or posts.</p>
 
 <h2 id="motivation">Motivation</h2>
 
-<p>This was made for several occasions: the STEM fair, and Halloween later that year when I went trick-or-treating as Luke Skywalker.</p>
+<p>I wanted to get more experience working with the <a href="https://12factor.net/">12 Factor App</a> model. Implementing a simple service like this seemed like the easiest way to go about it. I also figured this kind of service could be useful for me at some point.</p>
 
 <h2 id="technical-description">Technical Description</h2>
 
-<p>I started with the guts of an earlier robot I had built: two Lego NXT motors, connected to a Raspberry Pi through an H-Bridge motor driver. I spent a lot of time adding features to this robot: it could be controlled using a Wii remote, a smartphone app, or an interactive website. It had speech synthesis software and an internal speaker, a camera mounted to allow video streaming, and a few LEDs for blinkenlights.</p>
+<p>The “Snowflake” ID format was designed at Twitter for identifying tweets, so its scalability is its main selling point. Each Snowflake is a 64-bit integer composed of a timestamp in milliseconds (42 bits), worker ID (10 bits), and increment (12 bits).</p>
 
-<p>By the end of the project, I had switched to using an NXT brain to control the motors, connected over USB to the Raspberry Pi.</p>
+<p>The format can support 1024 possible worker IDs – too many to hardcode by hand, but too few to assign randomly. So, I made a second app, “SnowCloud,” that handles the assignment of these worker IDs to the Snowflake server instances. When a Snowflake server comes online, it will request a worker ID from a SnowCloud server. Then, it will periodically renew the worker ID with the SnowCloud server. The pool of worker IDs are stored as a Redis set, sorted by how recently each was used. In addition, each Snowflake server is identified by a UUID, and these UUIDs are tracked to ensure Snowflake servers can only renew their own assignments. (For reference, the SnowCloud repo is at, predictably, <a href="https://github.com/Breq16/snowcloud">Breq16/snowcloud</a>.)</p>
 
 <h2 id="results">Results</h2>
 
-<p>It did its job and did it well. This project was one of the first significant software projects I worked on, and it taught me how to design and organize a program longer than just a few lines.</p>
+<p>It does everything I set out to accomplish, and I got more experience developing microservices, which was cool. This was just a quick afternoon project–it was cool to go from idea to finished product in just a couple hours.</p>
 
 
 
 </div>
 <br>
 
-
-  <div class="footer">
+    </div>
+    <div class="footer">
     <div class="container">
         <br>
         <br>
@@ -183,7 +205,6 @@
         <br>
     </div>
 </div>
-
 
 </body>
 
