@@ -5,11 +5,11 @@ subtitle: A JavaScript library to embed information about a Minecraft server int
 image: /assets/images/logo/minecraft.jpg
 created: 2020
 repo: Breq16/mcstatus
-demo: https://mcstatus.breq.dev/
+demo: /showcase/mcstatus/
 ---
 
 <link rel="stylesheet" href="/assets/css/mcstatus.css">
-<script type="text/javascript" src="https://breq16.github.io/mcstatus/mcstatus.js"></script>
+<script type="text/javascript" src="https://github.breq.dev/mcstatus/mcstatus.js"></script>
 
 ## Overview
 

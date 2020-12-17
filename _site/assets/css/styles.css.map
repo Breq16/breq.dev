@@ -3,17 +3,17 @@
 	"file": "styles.css",
 	"sources": [
 		"styles.scss",
-		"../../gems/gems/jekyll-theme-breq-0.1.1/_sass/main.scss",
-		"../../gems/gems/jekyll-theme-breq-0.1.1/_sass/colors.scss",
-		"../../gems/gems/jekyll-theme-breq-0.1.1/_sass/defaults.scss",
-		"../../gems/gems/jekyll-theme-breq-0.1.1/_sass/basics.scss",
-		"../../gems/gems/jekyll-theme-breq-0.1.1/_sass/image.scss",
-		"../../gems/gems/jekyll-theme-breq-0.1.1/_sass/nav.scss",
-		"../../gems/gems/jekyll-theme-breq-0.1.1/_sass/footer.scss",
-		"../../gems/gems/jekyll-theme-breq-0.1.1/_sass/tiles.scss",
-		"../../gems/gems/jekyll-theme-breq-0.1.1/_sass/syntax.scss",
-		"../../gems/gems/jekyll-theme-breq-0.1.1/_sass/error.scss",
-		"../../gems/gems/jekyll-theme-breq-0.1.1/_sass/slide.scss"
+		"../../gems/gems/jekyll-theme-breq-0.1.2/_sass/main.scss",
+		"../../gems/gems/jekyll-theme-breq-0.1.2/_sass/colors.scss",
+		"../../gems/gems/jekyll-theme-breq-0.1.2/_sass/defaults.scss",
+		"../../gems/gems/jekyll-theme-breq-0.1.2/_sass/basics.scss",
+		"../../gems/gems/jekyll-theme-breq-0.1.2/_sass/image.scss",
+		"../../gems/gems/jekyll-theme-breq-0.1.2/_sass/nav.scss",
+		"../../gems/gems/jekyll-theme-breq-0.1.2/_sass/footer.scss",
+		"../../gems/gems/jekyll-theme-breq-0.1.2/_sass/tiles.scss",
+		"../../gems/gems/jekyll-theme-breq-0.1.2/_sass/syntax.scss",
+		"../../gems/gems/jekyll-theme-breq-0.1.2/_sass/error.scss",
+		"../../gems/gems/jekyll-theme-breq-0.1.2/_sass/slide.scss"
 	],
 	"sourcesContent": [
 		"@import \"main\";\n",
