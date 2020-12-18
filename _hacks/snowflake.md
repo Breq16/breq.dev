@@ -4,7 +4,7 @@ title: Snowflake
 subtitle: A scalable service to generate time-ordered, unique ID numbers.
 created: 2020
 repo: Breq16/snowflake
-demo: https://snowflake.breq.dev/
+demo: /showcase/snowflake
 ---
 
 ## Overview
