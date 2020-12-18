@@ -4,7 +4,7 @@ title: AutoRedditor
 subtitle: A service for caching and providing random Reddit posts.
 created: 2020
 repo: Breq16/redditor
-demo: https://redditor.breq.dev/
+demo: /showcase/redditor
 ---
 
 ## Overview
