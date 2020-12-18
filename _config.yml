@@ -8,5 +8,3 @@ collections:
         output: true
     archives:
         output: true
-    showcase:
-        output: true

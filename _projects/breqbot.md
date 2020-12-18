@@ -5,6 +5,7 @@ subtitle: A Discord bot with minigames and utilities.
 image: /assets/images/breqbot/website.png
 created: 2020
 repo: Breq16/breqbot
+demo: /showcase/breqbot
 ---
 
 ![](/assets/images/breqbot/8ball.png){: .actual-size}
@@ -15,8 +16,6 @@ One of the many "just for fun" commands that Breqbot has.
 ## Overview
 
 Breqbot is a Discord bot that manages a virtual economy, provides several fun minigames, gives access to comics, and has a variety of other features. Users can add Breqbot to a Discord server with their friends, giving their community access to these features.
-
-*There is a currently-running Breqbot instance at [bot.breq.dev](https://bot.breq.dev/){:target="_blank"}, if you would like to give it a try!*
 
 ## Motivation
 
