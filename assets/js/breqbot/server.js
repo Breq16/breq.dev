@@ -9,7 +9,7 @@ function add_server_info(server_info) {
     document.getElementById("member-count").innerHTML = server_info["member_count"]
 }
 
-function add_richest(richest) {
+function add_richest(richest, guild_id) {
     let table = document.getElementById("richest-members")
 
     for (const obj of richest) {
@@ -17,7 +17,7 @@ function add_richest(richest) {
 
         let link = document.createElement("a")
         link.innerHTML = obj["name"]
-        link.href = "/apps/breqbot/member?id="+obj["id"]
+        link.href = "/apps/breqbot/member?id="+obj["id"]+"&guild_id="+guild_id
 
         let cell = document.createElement("td")
         cell.appendChild(link)
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch("https://bot.breq.dev/api/richest?id="+idParam)
     .then(response => response.json())
     .then(data => {
-        add_richest(data)
+        add_richest(data, idParam)
     })
 
     fetch("https://bot.breq.dev/api/shop?id="+idParam)
