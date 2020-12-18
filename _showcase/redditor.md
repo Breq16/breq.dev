@@ -24,3 +24,5 @@ You can also get this list as a JSON object by GETting `/list`.
 Add `?channel=[some string here]` to ensure no repetion within 2 hours or 20 posts (whichever is sooner).
 
 Want your favorite sub added? Shoot me a message!
+
+Read more on the [project page <i class="fas fa-angle-double-right" aria-hidden="true"></i>]({% link _hacks/redditor.md %}) 
