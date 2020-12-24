@@ -7,7 +7,7 @@ title: Reverse Text
 
 This program will force you to type everything in reverse. Yep, that's literally all it does.
 
-![](screenshot.png){: .actual-size}
+![]({% link random/reverse_text/screenshot.png %}){: .actual-size}
 
 <br>
 
