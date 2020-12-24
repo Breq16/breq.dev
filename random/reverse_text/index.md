@@ -14,7 +14,7 @@ This program will force you to type everything in reverse. Yep, that's literally
 # Installation
 
 ### Windows
-You can get an .exe [here](reverse_text.exe) which I made with PyInstaller. Note that *you may see an "Unknown Publisher" warning when you run this file*. This is because I'm not willing to pay [$200 a year](https://stackoverflow.com/questions/3580349/code-signing-microsoft-authenticode) for a code signing certificate. The program itself is perfectly safe.
+You can get an .exe [here]({% link random/reverse_text/reverse_text.exe %}) which I made with PyInstaller. Note that *you may see an "Unknown Publisher" warning when you run this file*. This is because I'm not willing to pay [$200 a year](https://stackoverflow.com/questions/3580349/code-signing-microsoft-authenticode) for a code signing certificate. The program itself is perfectly safe.
 
 ### Build From Source
 You can download the source code and install the dependencies yourself if you'd like instead. It's written in Python 3 and requires `Pillow`, `tkinter`, and `keyboard`. The Base64 blob isn't anything nefarious, it's just the icon for the app. The code is below:
