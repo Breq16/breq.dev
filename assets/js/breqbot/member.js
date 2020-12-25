@@ -15,13 +15,6 @@ function fill_info(response) {
 
     document.getElementById("member-count").innerHTML = response["guild_size"]
 
-    let background_style = `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('${response["bg"] ?? "/assets/images/pansexual.png"}')`
-    console.log(background_style)
-    document.getElementById("profile-bg").style.backgroundImage = background_style
-    document.getElementById("profile-pfp").src = response["pfp"] ?? "/assets/images/pansexual.png"
-
-    document.getElementById("member-desc").innerHTML = response["desc"]
-
     document.getElementById("balance").innerHTML = response["balance"]
 
     let inventory_table = document.getElementById("inventory-table")
@@ -48,6 +41,15 @@ function fill_info(response) {
     }
 }
 
+function add_card(params, id, guild) {
+    params["format"] = "html";
+
+    let card = document.getElementById("card-frame")
+
+    card.src = ("https://cards.breq.dev/card?"
+                    + new URLSearchParams(params).toString())
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search)
     const idParam = urlParams.get("id")
@@ -57,5 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(response => response.json())
     .then(data => {
         fill_info(data)
+    })
+
+    fetch("https://bot.breq.dev/api/card?id="+idParam+"&guild_id="+guildId)
+    .then(response => response.json())
+    .then(params => {
+        add_card(params, idParam, guildId)
     })
 })

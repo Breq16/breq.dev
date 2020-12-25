@@ -3,50 +3,39 @@ layout: page
 title: User Info on Breqbot
 hidden: true
 ---
-
 <style>
-.profile-bg {
-    background-size: cover;
-    background-position: center;
+.card-frame {
+    border: none;
+    border-radius: 15px;
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    display: block;
 }
 
-
-.jumbotron.profile-bg .username {
-    color: #FFF;
+@media only screen and (max-width: 992px) {
+    .info-col .username {
+        display: none;
+    }
 }
 
-.jumbotron .username {
+@media only screen and (max-width: 576px) {
+    .card-frame {
+        width: min(500px, 100%);
+    }
+}
+
+.card-col {
+    padding-bottom: 20px;
+}
+
+.info-col {
+    text-align: center;
+}
+
+.info-col .username {
     font-size: 96px;
 }
-
-.jumbotron.profile-bg .server {
-    color: #FFF;
-}
-
-.jumbotron.profile-bg a {
-    color: #FFF;
-}
-
-.jumbotron.profile-bg p {
-    color: #DDD;
-}
-
-
-.profile-pfp {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.profile-crop {
-    width: 100%;
-    padding-top: 100%;
-    overflow: hidden;
-    position: relative;
-    border-radius: 50%;
-}
-
 
 .table {
     background-color: #e9ecef;
@@ -61,20 +50,18 @@ table {
 
 <script type="text/javascript" src="/assets/js/breqbot/member.js"></script>
 
-<div class="jumbotron profile-bg" id="profile-bg">
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="profile-crop">
-                <img class="profile-pfp" id="profile-pfp"></img>
-            </div>
+<div class="row">
+    <div class="col-lg card-col">
+        <div class="card-frame-wrapper">
+            <iframe class="card-frame" id="card-frame" src=""></iframe>
         </div>
-        <div class="col-sm-8 center">
-            <h1 class="username" id="member-name">...</h1>
-            <p class="lead">is on</p>
-            <h1 class="server" id="server-name">...</h1>
-            <p>(<span id="member-count">...</span> members)</p>
-            <h1 class="server" id="member-desc">...</h1>
-        </div>
+    </div>
+
+    <div class="col-lg info-col">
+        <h1 class="username" id="member-name">...</h1>
+        <p class="lead">is on</p>
+        <h1 class="server" id="server-name">...</h1>
+        <p>(<span id="member-count">...</span> members)</p>
     </div>
 </div>
 
