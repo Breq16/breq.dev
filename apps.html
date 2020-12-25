@@ -1,0 +1,25 @@
+---
+layout: page
+title: Apps
+---
+
+<h1 class="center">Apps on breq.dev</h1>
+
+<br>
+
+<div class="row center">
+    {% for app in site.apps %}
+    {% if app.hidden != true %}
+    <div class="col-xl-4 col-lg-6">
+        <a class="block-link" href="{{ app.url }}">
+            <div class="card">
+                <div class="card-body">
+                    <h1>{{ app.title }}</h1>
+                    <p>{{ app.subtitle }}</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>

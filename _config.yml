@@ -8,3 +8,5 @@ collections:
         output: true
     archives:
         output: true
+    apps:
+        output: true
