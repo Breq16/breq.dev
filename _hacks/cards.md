@@ -8,7 +8,7 @@ repo: Breq16/cards
 demo: /apps/cards
 ---
 
-<iframe style="display: block; margin: auto; border:none; border-radius: 15px" height="300" width="500" src="https://cards.breq.dev/card?format=html&template=background-image&name=Breq&bio=developer of Breqbot + other cool things 🧑‍💻 | DMs open | https://breq.dev/&background_image=https://breq.keybase.pub/branding/blue_green.png"></iframe>
+<iframe style="display: block; margin: auto; border:none; border-radius: 15px" height="300" width="500" src="https://cards.breq.dev/card/130828037779294750.html"></iframe>
 
 ## Overview
 
@@ -26,10 +26,12 @@ I had the idea of creating a standalone service to generate these cards based on
 
 The service will render an HTML template with the user-provided parameters. Then, if an image file is requested, it will use [pyppeteer](https://github.com/pyppeteer/pyppeteer) to take a screenshot of the HTML template using Chrome.
 
+It's also possible to "freeze" a card, preserving its screenshot on the server and returning a permanent link/URL to the card. This avoids having to use pyppeteer for every request for the card. To generate the card IDs, I'm using another service I made, [snowflake]({% link _hacks/snowflake.md %}).
+
 ## Results
 
 I wasn't originally a huge fan of using a headless browser in the server-side, as it seemed like it would be a waste of resources and using the wrong tool for the job, but the service ended up working pretty well, although the time-to-first-byte is, predictably, pretty poor compared to the other projects I've made.
 
 Performance aside, the process of developing new cards is much easier now. At the time of writing, I've pretty much only dipped my toes into web development, but I was able to make a few templates pretty quickly that looked much better than the old PIL tool ones.
 
-While integrating this service with Breqbot and analyzing how it could be used, I noticed that most use cases will generate a card once and then embed it repeatedly. For instance, users will request each others' cards on Breqbot more often than they will update their own, and cards put in e.g. GitHub profiles are typically created once and left as-is for a while. As such, it's kind of wasteful to regenerate the card for every request. A caching layer, where cards could be "frozen" and given a permanent URL, would reduce the time-to-first-byte and the server load significantly.
+While integrating this service with Breqbot and analyzing how it could be used, I noticed that most use cases will generate a card once and then embed it repeatedly. For instance, users will request each others' cards on Breqbot more often than they will update their own, and cards put in e.g. GitHub profiles are typically created once and left as-is for a while. As such, it's kind of wasteful to regenerate the card for every request, so I implemented the "Freezing" functionality. This was a cool experience: deploying a project, seeing how it was used, and then adding functionality where it was lacking.
