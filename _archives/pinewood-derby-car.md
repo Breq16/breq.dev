@@ -2,7 +2,7 @@
 layout: project
 title: Pinewood Derby Car
 subtitle: A model car full of blinkenlights that I programmed when I was a smol child.
-video: /assets/videos/pinewood-derby-car.webm
+video: /assets/videos/pinewood-derby-car.480p.webm
 created: 2014
 repo: Breq16/pinewood-derby-car
 status: old

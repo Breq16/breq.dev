@@ -2,7 +2,7 @@
 layout: project
 title: Vibrance
 subtitle: Vibrance synchronizes computers and smartphones to display configurable animations and effects.
-video: /assets/videos/vibrance.webm
+video: /assets/videos/vibrance.480p.webm
 created: 2020
 repo: Breq16/vibrance
 ---
