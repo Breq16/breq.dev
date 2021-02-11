@@ -7,6 +7,8 @@ navbar:
       url: /archives
     - name: featured
       url: /featured
+    - name: blog
+      url: /blog
     - name: apps
       url: /apps
     - name: contact
