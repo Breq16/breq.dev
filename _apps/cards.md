@@ -12,7 +12,7 @@ subtitle: Generate and embed digital cards featuring custom images and text.
 
 # Getting a card
 
-Send a GET request to `https://cards.breq.dev/card` with some of the following parameters:
+Send a GET request to `https://cards.api.breq.dev/card` with some of the following parameters:
 
 |---|---|---|
 | Parameter | Description |
@@ -28,7 +28,7 @@ In addition, each template has some of its own parameters. For instance, the bac
 
 # Freezing a card
 
-If you send a POST to that URL instead, your card will be "frozen": rendered on the server and stored there. The server will send back a JSON response with `{"card_id": 130810678565865982}` (or whatever your ID is). Then, send a GET to `https://cards.breq.dev/card/<id>.html` or `.png` or `.jpg` to get the card.
+If you send a POST to that URL instead, your card will be "frozen": rendered on the server and stored there. The server will send back a JSON response with `{"card_id": 130810678565865982}` (or whatever your ID is). Then, send a GET to `https://cards.api.breq.dev/card/<id>.html` or `.png` or `.jpg` to get the card.
 
 **Freezing cards is a good idea.** It will reduce the server load, since the server won't have to re-render the card every time it gets served. It will also speed up your app, since it won't have to wait for the server to render the card before displaying it to the user.
 
@@ -60,7 +60,7 @@ If you send a POST to that URL instead, your card will be "frozen": rendered on 
 
 <button type="button" class="btn btn-secondary btn-lg" onclick="updateCard()">Update</button> <button type="button" class="btn btn-primary btn-lg" onclick="freezeCard()">Freeze</button>
 
-<iframe style="border:none; border-radius: 15px" id="try_it_iframe" height="300" width="500" src="https://cards.breq.dev/card?format=html&template=background-image"></iframe>
+<iframe style="border:none; border-radius: 15px" id="try_it_iframe" height="300" width="500" src="https://cards.api.breq.dev/card?format=html&template=background-image"></iframe>
 
 <div class="form-group row">
 <label for="card_url" class="col-sm-2">Card URL: </label>
@@ -86,7 +86,7 @@ function updateCard() {
         format: card_format.value
     })
 
-    const url = "https://cards.breq.dev/card?" + params.toString()
+    const url = "https://cards.api.breq.dev/card?" + params.toString()
 
     card_url.value = url
     iframe.src = url
@@ -100,12 +100,12 @@ function freezeCard() {
         template: "background-image"
     })
 
-    const url = "https://cards.breq.dev/card?" + params.toString()
+    const url = "https://cards.api.breq.dev/card?" + params.toString()
 
     fetch(url, {"method": "post"})
         .then(response => response.json())
         .then(data => {
-            const frozen_url = `https://cards.breq.dev/card/${data["card_id"]}.${card_format.value}`
+            const frozen_url = `https://cards.api.breq.dev/card/${data["card_id"]}.${card_format.value}`
             card_url.value = frozen_url
             iframe.src = frozen_url
         })
@@ -118,15 +118,15 @@ function freezeCard() {
 
 **Can you use HTML?** - Include an IFrame linking to the card.
 
-`<iframe height="300" width="500" src="https://cards.breq.dev/card?format=html&template=background-image&name=IFrame Card&bio=Card embedded in a webpage using an iframe.&background_image=https://breq.dev/assets/images/pansexual.png"></iframe>`
+`<iframe height="300" width="500" src="https://cards.api.breq.dev/card?format=html&template=background-image&name=IFrame Card&bio=Card embedded in a webpage using an iframe.&background_image=https://breq.dev/assets/images/pansexual.png"></iframe>`
 
-<iframe style="border:none;" height="300" width="500" src="https://cards.breq.dev/card/130828421629413919.html"></iframe>
+<iframe style="border:none;" height="300" width="500" src="https://cards.api.breq.dev/card/130828421629413919.html"></iframe>
 
 **Otherwise, use images** - Use a basic `<img>` tag, or markdown.
 
-`![](https://cards.breq.dev/card?format=png&template=background-image&name=Rendered Card&bio=Card rendered on the server and included as a PNG.&background_image=https://breq.dev/assets/images/pansexual.png)`
+`![](https://cards.api.breq.dev/card?format=png&template=background-image&name=Rendered Card&bio=Card rendered on the server and included as a PNG.&background_image=https://breq.dev/assets/images/pansexual.png)`
 
-![](https://cards.breq.dev/card/130828557977848352.png){: .actual-size .align-left}
+![](https://cards.api.breq.dev/card/130828557977848352.png){: .actual-size .align-left}
 
 If you can, use IFrames. This reduces server-side load, speeding up your app.
 
@@ -134,4 +134,4 @@ If you can, use IFrames. This reduces server-side load, speeding up your app.
 
 Add a `border-radius: 15px` to the IFrame for some nice, rounded corners:
 
-<iframe style="border:none; border-radius: 15px" height="300" width="500" src="https://cards.breq.dev/card/130828825331173922.html"></iframe>
+<iframe style="border:none; border-radius: 15px" height="300" width="500" src="https://cards.api.breq.dev/card/130828825331173922.html"></iframe>

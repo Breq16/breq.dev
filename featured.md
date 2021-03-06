@@ -13,7 +13,7 @@ Robotics has always been one of my favorite activities, due to the unique teamwo
 <br>
 
 {% capture link %}{% link _projects/4393.md %}{% endcapture %}
-{% include slide.html video="/assets/videos/4393S.webm" title="VRC Team 4393S" subtitle="My first year on a Vex team was at the Maine School of Science and Mathematics. We qualified for the World Championship, and my programming netted us the highest number of autonomous raking points in the State Championship." link=link %}
+{% include slide.html video="/assets/videos/4393S.webm" title="VRC Team 4393S" subtitle="My first year on a Vex team was at the Maine School of Science and Mathematics. We qualified for the World Championship, and my programming netted us the highest number of autonomous ranking points in the State Championship." link=link %}
 
 {% capture link %}{% link _projects/344.md %}{% endcapture %}
 {% include slide.html video="/assets/videos/344.webm" title="VRC Team 344R" subtitle="For junior and senior year, I helped start Scarborough HS's robotics teams. As a rookie team, we also qualified for the World Championship in 2020." link=link %}
