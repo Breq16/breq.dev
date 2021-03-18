@@ -29,4 +29,4 @@ end
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 # Awesome theme time
-gem "jekyll-theme-breq", "~> 0.1.5"
+gem "jekyll-theme-breq", "~> 0.1.6"
