@@ -5,10 +5,10 @@ subtitle: Generate and embed digital cards featuring custom images and text.
 image: /assets/images/card.png
 created: 2020
 repo: Breq16/cards
-demo: /apps/cards
+demo: https://cards.breq.dev/
 ---
 
-<iframe style="display: block; margin: auto; border:none; border-radius: 15px" height="300" width="500" src="https://cards.breq.dev/card/130828037779294750.html"></iframe>
+<iframe style="display: block; margin: auto; border:none; border-radius: 15px" height="300" width="500" src="https://cards.api.breq.dev/card/130828037779294750.html"></iframe>
 
 ## Overview
 

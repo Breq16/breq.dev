@@ -5,7 +5,7 @@ subtitle: A Discord bot with minigames and utilities.
 image: /assets/images/breqbot/website.png
 created: 2020
 repo: Breq16/breqbot
-demo: /apps/breqbot
+demo: https://bot.breq.dev/
 ---
 
 ![](/assets/images/breqbot/8ball.png){: .actual-size}
