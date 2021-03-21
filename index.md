@@ -3,7 +3,7 @@ layout: page
 title: Home
 ---
 
-# Hi, I'm Breq *(aka Wesley)*.
+# Hi, I'm Brooke.
 Welcome to my little patch of internet.
 
 ---

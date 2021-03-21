@@ -3,7 +3,7 @@ layout: slideshow
 title: Featured
 ---
 
-{% include slide.html image="/assets/images/pansexual.png" title="Hey, I'm Breq." subtitle="Welcome to my little patch of internet. Take a tour of my favorite projects over the years." %}
+{% include slide.html image="/assets/images/pansexual.png" title="Hey, I'm Brooke." subtitle="Welcome to my little patch of internet. Take a tour of my favorite projects over the years." %}
 
 <br>
 
