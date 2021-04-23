@@ -10,3 +10,5 @@ collections:
         output: true
     apps:
         output: true
+
+include: [".well-known"]

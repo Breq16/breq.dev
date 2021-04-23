@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/breq
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://breq.dev
+  * I am breq (https://keybase.io/breq) on keybase.
+  * I have a public key ASDzngmuyD5spnJks3uFWsUZYuxP6YPVwAUVsTUbW7364Qo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120f39e09aec83e6ca67264b37b855ac51962ec4fe983d5c00515b1351b5bbdfae10a",
+      "host": "keybase.io",
+      "kid": "0120f39e09aec83e6ca67264b37b855ac51962ec4fe983d5c00515b1351b5bbdfae10a",
+      "uid": "9a64fd56567a7f8a8fbd5481e915eb19",
+      "username": "breq"
+    },
+    "merkle_root": {
+      "ctime": 1619214470,
+      "hash": "0f42650e1fa6fa28f37dd0aa303f055d2f7fc550599a7550143d52006f4e9ab195b3fe600a16aefbfce0a32e595bb55ed2f9047551ff651da0a193a987bcdbca",
+      "hash_meta": "1c74807be723d71edd39ec68754f0720ed29002a97d238301bac1fe19e576920",
+      "seqno": 19725499
+    },
+    "service": {
+      "entropy": "ho11rta8nbvXPAMBWOFMYJ2H",
+      "hostname": "breq.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.6.1"
+  },
+  "ctime": 1619214479,
+  "expire_in": 504576000,
+  "prev": "6df2505e830e29c9c7c3ec4cff35ffa4399a15593ff48724fd2b0b572525f80c",
+  "seqno": 17,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg854Jrsg+bKZyZLN7hVrFGWLsT+mD1cAFFbE1G1u9+uEKp3BheWxvYWTESpcCEcQgbfJQXoMOKcnHw+xM/zX/pDmaFVk/9Ick/SsLVyUl+AzEIJ0d/BsmBYZCh2HwLs0S8CLzO39Wf6aSdGJ8LsPEwmcNAgHCo3NpZ8RA1VYMC4b4v8yA9WQ6/cHL+u4T6erUJryCOTT5URlAn1rwHluoU47Niwz5O0cz5fOR6IJaUbWfY7IOx5/YnUTSDahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIM5xigeRjB4bVQRhyUnaVuY09T0hsdVv13F/PqHPppUjo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/breq
+
+==================================================================
