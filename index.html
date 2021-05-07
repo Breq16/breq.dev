@@ -1,0 +1,40 @@
+---
+layout: default
+title: Home
+---
+
+<link rel="stylesheet" href="/assets/css/mainpage.css">
+
+<div class="title">
+    <h1>Hi, I'm Brooke.</h1>
+    <span>Welcome to my little patch of internet.</span>
+
+    <video autoplay muted loop>
+        <source src="/assets/videos/flashy.webm" type="video/webm">
+    </video>
+</div>
+
+<div class="container page">
+
+    <div class="category">
+        <h1>Projects</h1>
+        <p>Large projects I'm especially proud of.</p>
+    </div>
+
+    {% include gallery.html gallery_of="projects" %}
+
+    <div class="category">
+        <h1>Hacks</h1>
+        <p>Small projects I made to learn about a technology, solve an interesting problem, or just for fun.</p>
+    </div>
+
+    {% include gallery.html gallery_of="hacks" %}
+
+    <div class="category">
+        <h1>Archives</h1>
+        <p>Very old projects that I'm only mildly embarrased of.</p>
+    </div>
+
+    {% include gallery.html gallery_of="archives" %}
+
+</div>
