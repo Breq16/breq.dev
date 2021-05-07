@@ -15,12 +15,6 @@ email:
     username: breq@breq.dev
     link: mailto:breq@breq.dev
 
-google:
-    sr: google
-    icon: fab fa-google
-    username: wesleyjchalmers
-    link: mailto:wesleyjchalmers@gmail.com
-
 reddit:
     sr: reddit
     icon: fab fa-reddit
